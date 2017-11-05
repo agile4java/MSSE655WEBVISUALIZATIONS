@@ -1,0 +1,12 @@
+.navbar-brand{
+    color: white;
+}
+
+.navbar-toggle{
+    display: block;
+    margin-left: 20px;
+}
+
+.navtab{
+    margin-top: 20px;
+}

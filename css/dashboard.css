@@ -1,0 +1,25 @@
+#page-header{
+    align-content: center;
+
+    padding-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    box-shadow: 5px 5px 5px #888888;
+    /*font-family: ;*/
+    /*display: flex;*/
+    background-color: #d3d3d3;
+}
+
+.kpis{
+    height: 100%;
+}
+
+#kpi1, #kpi2, #kpi3, #kpi4{
+    height: 180px;
+}
+
+.container-fluid{
+    height: auto;
+    align-content: center;
+}

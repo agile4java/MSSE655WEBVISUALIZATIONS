@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>conwayc-Discussion Question Week 1</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+
+
+    <!--        bootstrap css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    <link resource="fonts/cliche.otf">
+    <script src="js/dashboard.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/flotr2.min.js"></script>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+</head>
+<body>
+
+<!--------------------------------Sidebar html-------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
+    <div class="header">
+        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+            <i class="glyphicon glyphicon-align-left"></i>
+            Toggle Sidebar
+        </button>
+    </div>
+
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Collapsible Sidebar</h3>
+            </div>
+
+            <!--sidebar links
+            <ul class="list-unstyled components">
+                <li class="active "><a href="#">Home</a></li>
+                <li ><a href="#">Previous Work Experience</a></li>
+                <li >
+                    <a  href="#homeSubmenu" data-toggle="collapse"
+                       aria-expanded="false">Project Portfolio</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li ><a href="#">Android Projects</a> </li>
+                        <li ><a href="#">Javascript Projects</a> </li>
+                        <li ><a href="#">Java Projects</a> </li>
+                        <li ><a href="#">Misc - jQuery, AngularJS, PHP, etc.</a> </li>
+                    </ul>
+                </li>
+                <li ><a href="#">Education</a></li>
+                <li ><a href="#">Contact Info</a> </li>
+            </ul>
+
+        </nav>
+---------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------->
+<div id="wrapper">
+    <nav class="navbar bavbar-fixed-top navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span><a id="brander" class="navbar-brand">Brand</a></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="navtab"><a onclick="clearKPIs()">Layout</a></li>
+                <li class="navtab"><a onclick="flotr2()">Flotr2</a></li>
+                <li class="navtab"><a onclick="chartjs()">Chart.js</a></li>
+                <li class="navtab"><a onclick="chartist()">Chartist.js</a></li>
+                <li class="navtab"><a onclick="googleCharts()">Google Charts</a></li>
+                <li class="navtab"><a onclick="d3()">D3</a></li>
+                <li class="navtab"><a onclick="leaflet()">Leaflet</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row col-sm-12">
+                    <h3 id="page-header">Key Performance Indicators</h3>
+                </div>
+                <div class="row">
+                    <div class="container-fluid bg-3 text-center kpis">
+                        <div class="col-sm-4">
+                            <p><strong>KPI 1</strong></p>
+                            <div id="kpi1">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <p><strong>KPI 2</strong></p>
+                            <div id="kpi2">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <p><strong>KPI 3</strong></p>
+                            <div id="kpi3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container-fluid bg-3 text-center kpis">
+                        <p><strong>KPI 4</strong></p>
+                        <div id="kpi4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <footer class="container-fluid bg-4 text-center">
+                <br/>
+                <p>Dashboard design by Chad Conway <br/> <a href="mailto:cconway002@regis.edu">Email Me</a></p>
+            </footer>
+        </div>
+
+</body>
+</html>
