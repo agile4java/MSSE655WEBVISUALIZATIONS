@@ -16,10 +16,14 @@
 }
 
 #kpi1, #kpi2, #kpi3, #kpi4{
+    width: 100%;
     height: 250px;
 }
+
+
 
 .container-fluid{
     height: auto;
     align-content: center;
 }
+

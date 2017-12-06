@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/conwayc-LT1-dashboarddevelopment.iml" filepath="$PROJECT_DIR$/.idea/conwayc-LT1-dashboarddevelopment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/conwayc-LT5-GoogleCharts.iml" filepath="$PROJECT_DIR$/.idea/conwayc-LT5-GoogleCharts.iml" />
     </modules>
   </component>
 </project>
