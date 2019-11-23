@@ -39,7 +39,3 @@ window.onload = function() {
 	]; //customers
 	flotr2();
 };
-
-$(document).ready(function() {
-	$('#brander').text('Web Visualizations by Plugin:');
-});

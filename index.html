@@ -2,41 +2,54 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Chad Conway - Visualizations</title>
 
+		<!-- jQuery Popper Bootstrap JS -->
 		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<!-- Bootstrap.cc -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<!-- font-awesome -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+			integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+			crossorigin="anonymous"
+		/>
+		<!-- <script
 			src="https://code.jquery.com/jquery-1.12.4.min.js"
 			integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
 			crossorigin="anonymous"
-		></script>
+		></script> -->
 
 		<!--Chart.js cdn -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
-
 		<!--Charist.js cdn-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>
-
-		<!--        bootstrap css-->
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-			crossorigin="anonymous"
-		/>
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-			crossorigin="anonymous"
-		></script>
-
 		<!--Chartist.js pluging chartist-plugin-axistitle.min.js-->
 		<script src="js/chartist-plugin-axistitle.min.js"></script>
-
 		<!--Google AJAX API for Google Charts-->
 		<script src="https://www.gstatic.com/charts/loader.js"></script>
-
 		<!--d3-->
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 
@@ -57,43 +70,66 @@
 		<link rel="stylesheet" href="css/navbar.css" />
 		<link rel="stylesheet" href="css/sidebar.css" />
 		<link rel="stylesheet" href="css/d3kpiWk6.css" />
-		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css" rel="stylesheet" type="text/css">-->
 		<link rel="stylesheet" href="css/chartist.css" />
 	</head>
 	<body>
 		<div id="wrapper">
-			<nav class="navbar bavbar-fixed-top navbar-inverse" role="navigation">
-				<div class="navbar-header">
-					<button
-						type="button"
-						class="navbar-toggle"
-						data-toggle="collapse"
-						data-target=".navbar-ex1-collapse"
-					>
-						<span><a id="brander" class="navbar-brand">Brand</a></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					<ul class="nav navbar-nav">
-						<!-- <li class="navtab"><a onclick="clearKPIs()">Layout</a></li> -->
-						<li class="navtab"><a onclick="flotr2()">Flotr2</a></li>
-						<li class="navtab"><a onclick="chartjs()">Chart.js</a></li>
-						<li class="navtab"><a onclick="chartist()">Chartist.js</a></li>
-						<li class="navtab">
-							<a onclick="googleCharts()">Google Charts</a>
+			<nav class="navbar bg-dark navbar-expand-lg">
+				<span>
+					<i class="fas fa-lightbulb fa-2x text-light"></i>
+					<a href="#" class="navbar-brand text-light align-top pl-3">
+						Plugins:
+					</a>
+				</span>
+				<button
+					class="navbar-toggler text-light"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarToggleSection"
+					aria-controls="navbarToggleSection"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<i class="fas fa-bars fa-2x"></i>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarToggleSection">
+					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+						<li class="nav-item active">
+							<a class="text-light nav-item nav-link" onclick="flotr2()">
+								Flotr2
+							</a>
 						</li>
-						<li class="navtab"><a onclick="d3Draw()">D3</a></li>
-						<!-- <li class="navtab"><a onclick="leaflet()">Leaflet</a></li> -->
+						<li class="nav-item active">
+							<a class="text-light nav-item nav-link" onclick="chartjs()">
+								Chart.js
+							</a>
+						</li>
+						<li class="nav-item active">
+							<a class="text-light nav-item nav-link" onclick="chartist()">
+								Chartist.js
+							</a>
+						</li>
+						<li class="nav-item active">
+							<a class="text-light nav-item nav-link" onclick="googleCharts()">
+								Google Charts
+							</a>
+						</li>
+						<li class="nav-item active">
+							<a class="text-light nav-item nav-link" onclick="d3Draw()">D3</a>
+						</li>
 					</ul>
 				</div>
 			</nav>
 			<div id="page-wrapper">
 				<div class="container-fluid">
-					<div class="row col-sm-12">
-						<h3 id="page-header">Key Performance Indicators</h3>
-					</div>
 					<div class="row">
-						<div class="container-fluid bg-3 text-center kpis">
+						<h3 class="col-12" style="display:block;" id="page-header">
+							Key Performance Indicators
+						</h3>
+					</div>
+					<div class="container-fluid bg-3 text-center kpis">
+						<div class="row">
 							<div class="col-sm-4">
 								<p><strong>KPI 1</strong></p>
 								<div id="kpi1"></div>
@@ -108,8 +144,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="container-fluid bg-3 text-center kpis">
+					<div class="container-fluid bg-3 text-center kpis">
+						<div class="row">
 							<p><strong>KPI 4</strong></p>
 							<div id="kpi4"></div>
 						</div>
